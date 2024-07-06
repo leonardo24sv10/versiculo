@@ -3,7 +3,7 @@ body {
     background: linear-gradient(to right, #013e83, #18aaff);
     color: #ffffff;
     text-align: center;
-    margin: 0; /* Remove margens padrão do body */
+    margin: 0;
     height: auto;
 }
 
@@ -12,9 +12,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Use min-height para garantir que o container tenha pelo menos a altura da viewport */
-    padding: 20px; /* Ajuste o padding conforme necessário */
-    background-color: rgba(122, 122, 122, 0.801); /* Fundo translúcido */
+    min-height: 100vh;
+    padding: 20px;
+    background-color: rgba(122, 122, 122, 0.801);
 }
 
 .verse {
@@ -46,7 +46,7 @@ button {
     background: #212121;
     color: #f5f5f5;
     width: 200px;
-    transition: background-color 0.3s ease; /* Ajuste para especificar a propriedade a ser animada */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -58,14 +58,11 @@ button:hover {
     max-width: 200px;
     height: auto;
     margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 h1, p {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.6rem; /* Ajuste para manter consistência com o tamanho do h1 */
+    font-size: 1.6rem;
     margin-left: 1rem;
     margin-right: 1rem;
     font-weight: 600;
@@ -73,7 +70,12 @@ h1, p {
 
 .church-info {
     text-align: center;
-    margin-top: 1rem; /* Adicione um espaçamento superior para separar dos outros elementos */
+    margin-top: 1rem;
+}
+
+.church-info {
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .church-info ul {
@@ -88,19 +90,38 @@ h1, p {
     text-align: center;
     margin: 10px;
     flex: 1;
+    text-align: center; /* Centraliza o conteúdo do item */
 }
 
 .church-info ul li a {
-    display: inline-flex;
-    align-items: center;
+    display: block;
     text-decoration: none;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center; /* Centraliza o texto */
 }
 
 .church-info ul li a img {
     width: 30px;
     max-width: 100%;
     height: auto;
-    margin-right: 8px;
+    margin-bottom: 5px; /* Espaçamento entre a imagem e o texto */
 }
+
+/* Exemplo de media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Ajuste o padding conforme necessário */
+    }
+    .buttons {
+        flex-direction: row; /* Ajuste a direção dos botões para linha */
+    }
+    button {
+        width: 150px; /* Ajuste a largura dos botões para dispositivos móveis */
+    }
+    .church-info ul li {
+        flex-basis: 100%; /* Garante que cada item ocupe a largura total da linha */
+        text-align: center; /* Centraliza o conteúdo do item */
+    }
+}
+
